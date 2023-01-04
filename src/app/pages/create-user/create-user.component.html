@@ -65,13 +65,13 @@
             Este campo es requerido
           </mat-error>
           <mat-error
-          *ngIf="
-            form.controls['password'].errors &&
-            form.get('password')?.hasError('minlength')
-          "
-        >
-        La contraseña debe tener como minimo 8 caracteres
-        </mat-error>
+            *ngIf="
+              form.controls['password'].errors &&
+              form.get('password')?.hasError('minlength')
+            "
+          >
+            La contraseña debe tener como minimo 8 caracteres
+          </mat-error>
         </mat-form-field>
         <mat-form-field appearance="fill">
           <mat-label>Confirmar contraseña</mat-label>
@@ -90,14 +90,25 @@
             Este campo es requerido
           </mat-error>
           <mat-error
-          *ngIf="
-            form.controls['confirmPassword'].errors &&
-            form.get('confirmPassword')?.hasError('minlength')
-          "
-        >
-          La contraseña debe tener como minimo 8 caracteres
-        </mat-error>
+            *ngIf="
+              form.controls['confirmPassword'].errors &&
+              form.get('confirmPassword')?.hasError('minlength')
+            "
+          >
+            La contraseña debe tener como minimo 8 caracteres
+          </mat-error>
+          <mat-error
+            *ngIf="
+              form.controls['confirmPassword'].errors &&
+              form.get('confirmPassword')?.hasError('passwordMismatch')
+            "
+          >
+            La contraseña debe debe de coinicidir con la de antes
+          </mat-error>
         </mat-form-field>
+
+        {{ form.controls["phone"].errors | json }}
+        {{ form.invalid | json }}
 
         <button mat-raised-button color="primary" [disabled]="form.invalid">
           Registrar Usuario

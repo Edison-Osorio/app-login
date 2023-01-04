@@ -9,6 +9,16 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'create-user', component: CreateUserComponent },
   { path: 'home', component: HomeComponent },
+  {
+    path: 'acount',
+    loadChildren: () =>
+      import('./modules/acount/acount.module').then((m) => m.AcountModule),
+  },
+  {
+    path: 'invioce',
+    loadChildren: () =>
+      import('./modules/invioce/invioce.module').then((m) => m.InvioceModule),
+  },
   { path: '**', redirectTo: 'login' },
 ];
 
