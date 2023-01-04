@@ -1,0 +1,27 @@
+<div class="container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Iniciar Sesión</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="form">
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <input type="email" formControlName="email" matInput placeholder="Ingresa el correo electronico" />
+          <mat-error *ngIf="form.controls['email'].errors && form.get('email')?.hasError('required')">
+            Este campo es requerido
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Contaseña</mat-label>
+          <input type="password" formControlName="password" matInput placeholder="********" />
+          <mat-error *ngIf="form.controls['password'].errors && form.get('password')?.hasError('required')">
+            Este campo es requerido
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" [disabled]="form.invalid">Registrar Usuario</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
