@@ -6,6 +6,7 @@ import {
   FormControl,
   AbstractControl,
 } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 import { CustomValidationService } from 'src/app/services/custom-validation.service';
 
 @Component({
@@ -14,10 +15,14 @@ import { CustomValidationService } from 'src/app/services/custom-validation.serv
   styleUrls: ['./create-user.component.scss'],
 })
 export class CreateUserComponent implements OnInit {
+  private readonly REGULAR_EXPRESION =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   form!: FormGroup;
 
   constructor(
     private readonly formBuilder: FormBuilder,
+    private readonly _authService: AuthService,
     private readonly _verification: CustomValidationService
   ) {
     this.initForm();
@@ -29,11 +34,14 @@ export class CreateUserComponent implements OnInit {
     this.form = new FormGroup(
       {
         email: new FormControl('', {
-          validators: [Validators.required, Validators.email],
+          validators: [
+            Validators.required,
+            Validators.pattern(this.REGULAR_EXPRESION),
+          ],
         }),
         phone: new FormControl('', [
           Validators.required,
-          Validators.maxLength(10),
+          this._verification.phoneMaxLength(),
         ]),
         password: new FormControl('', [
           Validators.required,
@@ -50,16 +58,9 @@ export class CreateUserComponent implements OnInit {
             'password',
             'confirmPassword'
           ),
-          this._verification.phoneMaxLength('phone'),
         ],
       }
     );
-  }
-
-  passwordMatchValidator(g: AbstractControl) {
-    return g.get('password')?.value === g.get('confirmPassword')?.value
-      ? null
-      : { mismatch: true };
   }
 
   get emailInput(): AbstractControl | null {
@@ -73,5 +74,10 @@ export class CreateUserComponent implements OnInit {
   }
   get confirmPasswordInput(): AbstractControl | null {
     return this.form.get('confirmPassword');
+  }
+
+  formSubmit(): void {
+    console.log('this is form', this.form.value);
+    this._authService.registerUser(this.form.value);
   }
 }

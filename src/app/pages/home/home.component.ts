@@ -2,22 +2,21 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  constructor(private readonly router: Router) {}
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-  .pipe(
-    map(result => result.matches),
-    shareReplay()
-  );
+  routingAcount(): void {
+    this.router.navigate(['acount']);
+  }
 
-constructor(private breakpointObserver: BreakpointObserver) {}
-
- 
-
+  routingInvioce(): void {
+    this.router.navigate(['invioce']);
+  }
 }

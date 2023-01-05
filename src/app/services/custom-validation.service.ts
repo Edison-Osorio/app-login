@@ -34,18 +34,15 @@ export class CustomValidationService {
     };
   }
 
-  phoneMaxLength(phone: string): ValidatorFn {
-    return (controls: AbstractControl) => {
-      const phoneControl = controls.get(phone);
-
-      if (!phoneControl) {
+  phoneMaxLength(): ValidatorFn {
+    return (control: AbstractControl) => {
+      if (!control) {
         return null;
       }
-      if (phoneControl?.errors && !phoneControl.errors['maxlength10']) {
+      if (control?.errors && !control.errors['maxlength10']) {
         return null;
       }
-      if (phoneControl.value > 10) {
-        controls.get(phone)?.setErrors({ maxlength10: true });
+      if ((control?.value).length !== 10) {
         return { maxlength10: true };
       } else {
         return null;

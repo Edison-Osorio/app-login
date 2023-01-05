@@ -1,14 +1,12 @@
 <div class="container">
-  <mat-toolbar color="primary">
-    <button
-      type="button"
-      aria-label="Toggle sidenav"
-      mat-icon-button
-      *ngIf="isHandset$ | async"
-    >
-      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-    </button>
+  <mat-toolbar color="basic">
     <span> Bienvenido al sistema CX </span>
+    <button mat-raised-button color="primary" (click)="routingAcount()">
+      Ir a Acount
+    </button>
+    <button mat-raised-button color="accent" (click)="routingInvioce()">
+      Ir a Invioice
+    </button>
   </mat-toolbar>
 
   <h3>Ha ingresado al sistema de gestion Celerix</h3>

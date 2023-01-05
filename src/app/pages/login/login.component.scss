@@ -2,17 +2,23 @@
   width: 50%;
   margin: auto;
   padding-top: 10rem;
-  }
-  
-  .card{
-    width: 50%;
-    margin: auto;
-  }
-  
-  mat-form-field{
-    width: 100%;
-  }
-  
-  button{
-    width: 100%;
-  }
+}
+
+.card {
+  width: 50%;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+.createUser {
+  cursor: pointer;
+  margin: 2rem;
+  color: blue;
+}

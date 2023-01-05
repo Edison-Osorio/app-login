@@ -4,7 +4,7 @@
       <mat-card-title>Iniciar Sesión</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form [formGroup]="form">
+      <form [formGroup]="form" (ngSubmit)="formSubmit()">
         <mat-form-field appearance="fill">
           <mat-label>Usuario</mat-label>
           <input
@@ -44,6 +44,7 @@
           Registrar Usuario
         </button>
       </form>
+      <p class="createUser" (click)="routerSinUp()">Crear Usuario</p>
     </mat-card-content>
   </mat-card>
 </div>

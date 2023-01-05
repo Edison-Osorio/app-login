@@ -9,14 +9,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Angular Material
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from './shared/shared.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+// Tranlate
 
 @NgModule({
   declarations: [
@@ -29,16 +27,23 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
+    SharedModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage:'es',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
