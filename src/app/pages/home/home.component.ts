@@ -11,13 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(
-    private readonly router: Router,
-    public translate: TranslateService
-  ) {
-    translate.addLangs(['es', 'en']);
-    translate.setDefaultLang('es');
-  }
+  constructor(private readonly router: Router) {}
 
   routingAcount(): void {
     this.router.navigate(['acount']);
@@ -25,9 +19,5 @@ export class HomeComponent {
 
   routingInvioce(): void {
     this.router.navigate(['invioce']);
-  }
-
-  switchLang(lang: string) {
-    this.translate.use(lang);
   }
 }

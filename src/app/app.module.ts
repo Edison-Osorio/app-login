@@ -31,7 +31,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
-      defaultLanguage:'es',
+      defaultLanguage: 'es',
       loader: {
         provide: TranslateLoader,
         useFactory: httpTranslateLoader,

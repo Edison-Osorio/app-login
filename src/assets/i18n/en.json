@@ -1,8 +1,29 @@
 {
-  "titleHome": "Welcome to CX System",
-  "subtitleHome": "You have logged in to the Celerix management system",
-  "titleAcount": "Welcome to Acount",
+  "CHANGELANGUAJE": "Change Languaje:",
+  "ERRORS": {
+    "CONFIRMPASSWORD": "Password must match the previous one",
+    "EMAIL": "It must be a valid email address",
+    "LENGTHPHONE": "The phone number must be 10 characters long",
+    "MINLENGTHPASSWORD": "Password must be at least 8 characters long.",
+    "REQUIRED": "This field is required"
+  },
+  "login": {
+    "password": "password",
+    "sign-in": "Sing-In",
+    "user": "Username or email"
+  },
+  "sign-up": {
+    "confirmPassword": "Confirm Password",
+    "create": "Create",
+    "email": "email",
+    "password": "password",
+    "phone": "phone",
+    "sign-up": "Register new User"
+  },
   "subtitleAcount": "You are logged in to the Celerix management system in Acount",
-  "titleInvioce": "Welcome to Invioce",
-  "subtitleInvioce": "You have logged in to the Celerix management system in invioce."
+  "subtitleHome": "You have logged in to the Celerix management system",
+  "subtitleInvioce": "You have logged in to the Celerix management system in invioce.",
+  "titleAcount": "Welcome to Acount",
+  "titleHome": "Welcome to CX System",
+  "titleInvioce": "Welcome to Invioce"
 }

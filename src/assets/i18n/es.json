@@ -1,8 +1,29 @@
 {
-  "titleHome": "Bienvenido al sistema CX",
-  "subtitleHome": "Ha ingresado al sistema de gestion Celerix",
-  "titleAcount": "Bienvenido al sistema esta es Acount",
+  "CHANGELANGUAJE": "Cambiar de idioma:",
+  "ERRORS": {
+    "CONFIRMPASSWORD": "La contraseña debe coincidir con la anterior",
+    "EMAIL": "Debe ser iun email válido",
+    "LENGTHPHONE": "El telefono debe tener 10 caracteres",
+    "MINLENGTHPASSWORD": "La contraseña debe de tener como minimo 8 caracteres",
+    "REQUIRED": "Este campo es requerido"
+  },
+  "login": {
+    "password": "Contraseña",
+    "sign-in": "Iniciar Sesión",
+    "user": "Usuario"
+  },
+  "sign-up": {
+    "confirmPassword": "confirmar contraseña",
+    "create": "Crear",
+    "email": "Correo",
+    "password": "contraseña",
+    "phone": "telefono",
+    "sign-up": "Registrar usuario"
+  },
   "subtitleAcount": "Ha ingresado al sistema de gestion Celerix esta en Acount",
-  "titleInvioce": "Bienvenido al sistema esta en Invioce",
-  "subtitleInvioce": "Ha ingresado al sistema de gestion Celerix esta en invioce"
+  "subtitleHome": "Ha ingresado al sistema de gestion Celerix",
+  "subtitleInvioce": "Ha ingresado al sistema de gestion Celerix esta en invioce",
+  "titleAcount": "Bienvenido al sistema esta es Acount",
+  "titleHome": "Bienvenido al sistema CX",
+  "titleInvioce": "Bienvenido al sistema esta en Invioce"
 }
