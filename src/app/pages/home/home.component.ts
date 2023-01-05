@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(private readonly router: Router) {}
+  constructor(
+    private readonly router: Router,
+    public translate: TranslateService
+  ) {
+    translate.addLangs(['es', 'en']);
+    translate.setDefaultLang('es');
+  }
 
   routingAcount(): void {
     this.router.navigate(['acount']);
@@ -18,5 +25,9 @@ export class HomeComponent {
 
   routingInvioce(): void {
     this.router.navigate(['invioce']);
+  }
+
+  switchLang(lang: string) {
+    this.translate.use(lang);
   }
 }

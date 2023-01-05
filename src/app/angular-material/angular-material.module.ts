@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [],
@@ -22,6 +23,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSidenavModule,
     MatIconModule,
     MatSnackBarModule,
+    MatSelectModule,
   ],
   exports: [
     MatFormFieldModule,
@@ -32,6 +34,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSidenavModule,
     MatIconModule,
     MatSnackBarModule,
+    MatSelectModule,
   ],
 })
 export class AngularMaterialModule {}
