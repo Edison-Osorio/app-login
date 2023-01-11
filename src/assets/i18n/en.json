@@ -1,5 +1,5 @@
 {
-  "CHANGELANGUAJE": "Change Languaje:",
+  "CHANGELANGUAJE": "Change Languaje nativo: ",
   "ERRORS": {
     "CONFIRMPASSWORD": "Password must match the previous one",
     "EMAIL": "It must be a valid email address",
