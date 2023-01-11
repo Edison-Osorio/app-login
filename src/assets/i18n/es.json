@@ -13,7 +13,6 @@
     "user": "Usuario"
   },
   "lorem": "Hola que mas, este es un texto de prueba el cual se puede implementar en la vista de acount como en la vista de  Invioce",
-  "otherLorem": "Cada texto incluye ejercicios con preguntas para evaluar la comprensión lograda. Esto te permitirá reforzar tu vocabulario, mejorar la gramática y reconocer expresiones propias del español.  Nuestros textos son gratis y están diseñados por nivel de complejidad. Además pueden descargarse en formato PDF.  Si quieres aprender español o mejorar tu nivel del idioma, estos recursos te serán de gran ayuda.",
   "sign-up": {
     "confirmPassword": "confirmar contraseña",
     "create": "Crear",
@@ -26,6 +25,7 @@
   "subtitleHome": "Ha ingresado al sistema de gestion Celerix",
   "subtitleInvioce": "Ha ingresado al sistema de gestion Celerix esta en invioce",
   "titleAcount": "Bienvenido al sistema esta es Acount",
+  "titleH2": "Este no tenia i18n",
   "titleHome": "Bienvenido al sistema CX",
   "titleInvioce": "Bienvenido al sistema esta en Invioce"
 }
