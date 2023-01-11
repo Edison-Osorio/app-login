@@ -1,10 +1,11 @@
 import { AngularMaterialModule } from './../angular-material/angular-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, AngularMaterialModule],
-  exports: [AngularMaterialModule],
+  imports: [CommonModule, AngularMaterialModule, TranslateModule],
+  exports: [AngularMaterialModule, TranslateModule],
 })
 export class SharedModule {}
