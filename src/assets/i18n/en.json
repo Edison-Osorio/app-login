@@ -13,7 +13,6 @@
     "user": "Username or email"
   },
   "lorem": "Hello what else, this is a test text which can be implemented in the acount view as in the Invioce view",
-  "otherLorem": "Each text includes exercises with questions to assess the understanding achieved. This will allow you to reinforce your vocabulary, improve grammar and recognize expressions typical of Spanish.  Our texts are free and are designed by level of complexity. They can also be downloaded in PDF format.  If you want to learn Spanish or improve your level of the language, these resources will be of great help.",
   "sign-up": {
     "confirmPassword": "Confirm Password",
     "create": "Create",
@@ -26,6 +25,7 @@
   "subtitleHome": "You have logged in to the Celerix management system",
   "subtitleInvioce": "You have logged in to the Celerix management system in invioce.",
   "titleAcount": "Welcome to Acount",
+  "titleH2": "With i18n",
   "titleHome": "Welcome to CX System",
   "titleInvioce": "Welcome to Invioce"
 }
