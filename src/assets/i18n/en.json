@@ -12,6 +12,7 @@
     "sign-in": "Sing-In",
     "user": "Username or email"
   },
+  "lorem": "Hello what else, this is a test text which can be implemented in the acount view as in the Invioce view",
   "sign-up": {
     "confirmPassword": "Confirm Password",
     "create": "Create",
@@ -24,6 +25,7 @@
   "subtitleHome": "You have logged in to the Celerix management system",
   "subtitleInvioce": "You have logged in to the Celerix management system in invioce.",
   "titleAcount": "Welcome to Acount",
+  "titleH2": "With i18n",
   "titleHome": "Welcome to CX System",
   "titleInvioce": "Welcome to Invioce"
 }
