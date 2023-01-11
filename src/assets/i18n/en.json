@@ -12,6 +12,7 @@
     "sign-in": "Sing-In",
     "user": "Username or email"
   },
+  "lorem": "Hello what else, this is a test text which can be implemented in the acount view as in the Invioce view",
   "sign-up": {
     "confirmPassword": "Confirm Password",
     "create": "Create",

@@ -12,6 +12,7 @@
     "sign-in": "Iniciar Sesión",
     "user": "Usuario"
   },
+  "lorem": "Hola que mas, este es un texto de prueba el cual se puede implementar en la vista de acount como en la vista de  Invioce",
   "sign-up": {
     "confirmPassword": "confirmar contraseña",
     "create": "Crear",
