@@ -21,7 +21,6 @@ export class CreateUserComponent implements OnInit {
   form!: FormGroup;
 
   constructor(
-    private readonly formBuilder: FormBuilder,
     private readonly _authService: AuthService,
     private readonly _verification: CustomValidationService
   ) {
