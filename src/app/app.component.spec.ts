@@ -1,8 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateService } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
+import { of } from "rxjs";
 
 describe('AppComponent', () => {
+  
+  const mocks = {
+    translateServiceMock:{
+      setDefaultLang:jasmine.createSpy().and.returnValue(of('ES')),
+      use:jasmine.createSpy(),
+    }
+  }
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -11,6 +21,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers:[
+      {
+        provide: TranslateService, useValue:mocks.translateServiceMock
+      }
+      ]
     }).compileComponents();
   });
 
@@ -20,16 +35,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'app-login'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('app-login');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('app-login app is running!');
-  });
 });

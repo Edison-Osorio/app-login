@@ -10,8 +10,9 @@ export class AppComponent {
   title = 'app-login';
 
   constructor(public translate: TranslateService) {
-    translate.addLangs(['es', 'en']);
+   // translate.addLangs(['es', 'en']);
     translate.setDefaultLang('es');
+    translate.use('es')
   }
 
   switchLang(lang: string) {

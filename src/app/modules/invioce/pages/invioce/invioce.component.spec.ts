@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateService } from '@ngx-translate/core';
+import { TranslatePipeMock, TranslateServiceStub } from 'src/app/shared/moks/tranlate.mock';
 
 import { InvioceComponent } from './invioce.component';
 
@@ -8,7 +10,10 @@ describe('InvioceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InvioceComponent ]
+      declarations: [ InvioceComponent,TranslatePipeMock], 
+ providers:[{
+        provide:TranslateService, useValue:TranslateServiceStub
+      }]
     })
     .compileComponents();
 

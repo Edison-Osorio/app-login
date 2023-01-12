@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipeMock, TranslateServiceStub } from 'src/app/shared/moks/tranlate.mock';
 
 import { AcountComponent } from './acount.component';
 
@@ -8,7 +10,10 @@ describe('AcountComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AcountComponent ]
+      declarations: [ AcountComponent, TranslatePipeMock ],
+      providers:[{
+        provide:TranslateService, useValue:TranslateServiceStub
+      }]
     })
     .compileComponents();
 
