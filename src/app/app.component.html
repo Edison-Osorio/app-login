@@ -1,17 +1,6 @@
 <mat-toolbar color="basic">
   <!-- <span> {{ "titleHome" | translate }} </span> -->
   <span translate>CHANGELANGUAJE</span>
-  <!-- <mat-form-field appearance="fill">
-    <mat-label>Languaje</mat-label>
-    <mat-select #select name="" (valueChange)="switchLang(select.value)">
-      <mat-option
-        *ngFor="let languaje of translate.getLangs()"
-        [value]="languaje"
-      >
-        {{ languaje }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field> -->
 
   <select name="" #SelectLanguaje (change)="switchLang(SelectLanguaje.value)">
     <option

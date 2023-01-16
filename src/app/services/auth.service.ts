@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { User } from '../models/user';
 import { UserLogin } from '../models/user-login';
+import { Routes } from '../models/routes';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +27,7 @@ export class AuthService {
       user.email === userLocalStorage.email &&
       user.password === userLocalStorage.password
     ) {
-      this.router.navigate(['home']);
+      this.router.navigate([Routes.HOME]);
     } else {
       this.snack.open('Usuario o contraseña invalido', 'Aceptar', {
         duration: 20000,

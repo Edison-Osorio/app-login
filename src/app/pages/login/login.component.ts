@@ -1,7 +1,13 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { Routes } from '../../models/routes';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +24,7 @@ export class LoginComponent implements OnInit {
     this.initForm();
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   initForm(): void {
     this.form = new FormGroup({
@@ -27,7 +33,7 @@ export class LoginComponent implements OnInit {
     });
   }
   routerSinUp(): void {
-    this.router.navigate(['create-user']);
+    this.router.navigate([Routes.CREATE_USER]);
   }
 
   formSubmit() {
