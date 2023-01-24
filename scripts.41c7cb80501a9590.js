@@ -1,0 +1,1 @@
+function scriptGTM(t,s,g,e,r){t[e]=t[e]||[],t[e].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var n=s.getElementsByTagName(g)[0],a=s.createElement(g),c="dataLayer"!=e?"&l="+e:"";a.async=!0,a.src="https://www.googletagmanager.com/gtm.js?id="+r+c,n.parentNode.insertBefore(a,n),console.log("GTM success")}

@@ -1,0 +1,31 @@
+{
+  "CHANGELANGUAJE": "Cambiar de idioma:",
+  "ERRORS": {
+    "CONFIRMPASSWORD": "La contraseña debe coincidir con la anterior",
+    "EMAIL": "Debe ser iun email válido",
+    "LENGTHPHONE": "El telefono debe tener 10 caracteres",
+    "MINLENGTHPASSWORD": "La contraseña debe de tener como minimo 8 caracteres",
+    "REQUIRED": "Este campo es requerido"
+  },
+  "login": {
+    "password": "Contraseña",
+    "sign-in": "Iniciar Sesión",
+    "user": "Usuario"
+  },
+  "lorem": "Hola que mas, este es un texto de prueba el cual se puede implementar en la vista de acount como en la vista de  Invioce",
+  "sign-up": {
+    "confirmPassword": "confirmar contraseña",
+    "create": "Crear",
+    "email": "Correo",
+    "password": "contraseña",
+    "phone": "telefono",
+    "sign-up": "Registrar usuario"
+  },
+  "subtitleAcount": "Ha ingresado al sistema de gestion Celerix esta en Acount",
+  "subtitleHome": "Ha ingresado al sistema de gestion Celerix",
+  "subtitleInvioce": "Ha ingresado al sistema de gestion Celerix esta en invioce",
+  "titleAcount": "Bienvenido al sistema esta es Acount",
+  "titleH2": "Este no tenia i18n",
+  "titleHome": "Bienvenido al sistema CX",
+  "titleInvioce": "Bienvenido al sistema esta en Invioce"
+}
